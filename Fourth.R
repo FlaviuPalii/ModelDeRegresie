@@ -68,7 +68,6 @@ summary(resamples(list(model1 = cv_model1, model2 = cv_model2)))
 # Liniaritatea pentru modelul 1
 plot(model1)
 
-# Omul de neajuns și Homoscedasticitatea
 plot(model1, which = c(1, 3))
 
 # Normalitatea reziduurilor
@@ -147,8 +146,6 @@ cat("Metrics for Final Model (Stepwise with Overall.Qual):\n")
 cat("RMSE:", rmse_final_model_with_qual, "\n")
 cat("MSE:", mse_final_model_with_qual, "\n")
 cat("R-squared:", rsquared_final_model_with_qual, "\n\n")
-
-# Presupunând că ames_test este setul de date de test și ai deja seturile finale de modele
 
 # Facem predicțiile
 predictions_final_model <- predict(final_model, newdata = ames_test)
